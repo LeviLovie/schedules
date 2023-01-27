@@ -1,5 +1,11 @@
 [
     {
+        "nick": "test",
+        "timeZone": 0,
+        "minTime": 9,
+        "maxTime": 20
+    },
+    {
         "nick": "Leo",
         "timeZone": 9,
         "minTime": 9,
