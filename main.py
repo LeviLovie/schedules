@@ -216,7 +216,8 @@ def workOnSchedule():
     print("\033[1;36m@\033[1;32m12345678901234567890123\033[1;36m@\033[1;0m|")
 
     print("+", end="")
-    print("--------------------".center(20), end="")
+    # print("--------------------".center(20), end="")
+    print(("-" * 20).center(20), end="")
     print("+", end="")
     for i in range((24 * 3) + 1):
         print("-", end="")
