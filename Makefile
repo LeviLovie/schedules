@@ -2,8 +2,6 @@ main:
 	@python3 main.py
 
 dev:
-	@echo ""
-	@echo "Running..." >> log.log
-	@echo "$n" >> log.log
-	@echo "Running..." >> log.log
+	@echo "$(shell date +%Y-%m-%d-%H-%M-%S) Running..." >> log.log
 	@python3 main.py --dev
+	@echo "" >> log.log
