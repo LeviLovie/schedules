@@ -1,7 +1,7 @@
 import sys
-from src import foo
-from src import users
-from src import schedules
+from lib import foo
+from lib import users
+from lib import schedules
 
 
 isDev = False

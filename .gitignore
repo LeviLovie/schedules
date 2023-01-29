@@ -1,9 +1,10 @@
 # Schedeules
-schedules/*
 schedules.sqlite
+log.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
+lib/__pycache__/ # My
 *.py[cod]
 *$py.class
 
