@@ -1,6 +1,6 @@
 import json
 
-import src.helping as helping
+import src.foo as foo
 import src.config as config
 
 def printVariations():
@@ -21,7 +21,7 @@ def printVariations():
     return chose
 
 def chose_1(isDev):
-    helping.clearTerminal(isDev)
+    foo.clearTerminal(isDev)
 
     print("Users:")
     for i in config.schedule:
@@ -34,7 +34,7 @@ def chose_1(isDev):
     timeZone = int(input("Type time zone of user (UTC+): "))
     minTime = int(input("Type min time of user: "))
     maxTime = int(input("Type max time of user: "))
-    config.schedule.append(helping.User({
+    config.schedule.append(foo.User({
         "nick": name,
         "timeZone": timeZone,
         "minTime": minTime,
@@ -42,7 +42,7 @@ def chose_1(isDev):
     }))
 
 def chose_2(isDev):
-    helping.clearTerminal(isDev)
+    foo.clearTerminal(isDev)
 
     print("Users:")
     for i in config.schedule:
@@ -58,7 +58,7 @@ def chose_2(isDev):
             break
 
 def chose_3(isDev):
-    helping.clearTerminal(isDev)
+    foo.clearTerminal(isDev)
 
     print("Users:")
     for i in config.schedule:
@@ -114,11 +114,11 @@ def chose_3(isDev):
                 i.maxTime = newMaxTime
                 break
     elif inputData == 6:
-        helping.clearTerminal(isDev)
+        foo.clearTerminal(isDev)
         return
 
 def chose_4(isDev):
-    helping.clearTerminal(isDev)
+    foo.clearTerminal(isDev)
 
     with open(config.path, 'w') as outfile:
         json.dump([u.__dict__ for u in config.schedule], outfile)
@@ -138,12 +138,12 @@ def general(isDev):
         chose_4(isDev)
         return 0
     elif chose == 5:
-        helping.clearTerminal(isDev)
+        foo.clearTerminal(isDev)
         return 1
     elif chose == 6:
-        helping.clearTerminal(isDev)
+        foo.clearTerminal(isDev)
         exit(0)
     else:
-        helping.clearTerminal(isDev)
+        foo.clearTerminal(isDev)
         print("Invalid input")
         return 0

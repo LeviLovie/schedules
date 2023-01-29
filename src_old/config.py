@@ -1,7 +1,7 @@
 import os
 import json
 
-import src.helping as helping
+import src.foo as foo
 
 schedule = []
 path = ""
@@ -27,7 +27,7 @@ def openConfigFile(showListOfSchedules):
     try:
         with open(path) as json_file:
             schedule_json = json.load(json_file)
-            schedule = [helping.User(u) for u in schedule_json]
+            schedule = [foo.User(u) for u in schedule_json]
     except FileNotFoundError:
         print("File not found")
         return
@@ -40,4 +40,4 @@ def newConfigFile(isDev):
     with open(name, 'w') as outfile:
         json.dump([], outfile)
 
-    helping.clearTerminal(isDev)
+    foo.clearTerminal(isDev)

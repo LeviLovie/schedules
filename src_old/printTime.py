@@ -1,4 +1,4 @@
-import src.helping as helping
+import src.foo as foo
 
 def printNameTableLine():
     print("+", end="")
@@ -15,8 +15,8 @@ def table():
     print("|", end="")
     for i in range(3):
         print("\033[1;36m@\033[1;32m", end="")
-        for i in range(len(helping.firstTimeSymols)):
-            print(str(helping.firstTimeSymols[i]), end="")
+        for i in range(len(foo.firstTimeSymols)):
+            print(str(foo.firstTimeSymols[i]), end="")
     print("\033[1;36m@\033[1;0m|")
 
 def UTC_body():
@@ -25,8 +25,8 @@ def UTC_body():
     print("|", end="")
     for i in range(3):
         print("\033[1;36m@\033[1;32m", end="")
-        for i in range(len(helping.secondTimeSymbols)):
-            print(str(helping.secondTimeSymbols[i]), end="")
+        for i in range(len(foo.secondTimeSymbols)):
+            print(str(foo.secondTimeSymbols[i]), end="")
     print("\033[1;36m@\033[1;0m|")
 
 
@@ -36,11 +36,11 @@ def LOC_body(localTime):
     print("".center(20), end="")
     print("|", end="")
     # for i in range(3):
-    for j in range(len(helping.secondTimeSymbols)):
+    for j in range(len(foo.secondTimeSymbols)):
         if j + localTime == 0 or j + localTime == 24:
             print("\033[1;36m@\033[1;0m", end="")
         if j + localTime > 0 and j + localTime < 24:
-            print("\033[1;32m" + str(helping.secondTimeSymbols[j]) + "\033[1;0m", end="")
+            print("\033[1;32m" + str(foo.secondTimeSymbols[j]) + "\033[1;0m", end="")
         # if i + localTime == 0 or i + localTime == 24 or i + localTime == 48:
         #     print("\033[1;36m@\033[1;32m1\033[1;0m", end="")
         # elif i + localTime < 24 or i + localTime < 48 or i + localTime < 72:
